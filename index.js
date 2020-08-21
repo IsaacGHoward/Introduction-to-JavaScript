@@ -143,8 +143,15 @@ console.log("Task 5B : " + feetToCentimeters(20));
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
-
+function annoyingSong(startPoint){
+    var bottlesCount = startPoint;
+    while(bottlesCount > 0){
+        console.log(`${bottlesCount} bottles of soda on the wall, ${bottlesCount} bottles of soda, take one down pass it around ${bottlesCount-1} bottles of soda on the wall`);
+        bottlesCount--;
+    }
+}
+console.log("Task 6  : vvv")
+annoyingSong(3);
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -156,17 +163,35 @@ console.log("Task 5B : " + feetToCentimeters(20));
 //60s should be D 
 //and anything below 60 should be F
   
-
-  
+function gradeCalc(numberGrade){
+    if(numberGrade >= 90)
+        return("A");
+    else if(numberGrade >= 80)
+        return("B");
+    else if(numberGrade >= 70)
+        return("C");
+    else if(numberGrade >= 60)
+        return("D");
+    else
+        return("F");
+}
+console.log("Task 7  : A 70 should be a " + gradeCalc(70));
   
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
-
-
-
+function vowelCount(theString){
+    var splitString = theString.toLowerCase().split('');
+    var numVowels = 0;
+    splitString.forEach(character => {
+        if(character.match(`a|e|i|o|u`))
+            numVowels++;
+    });
+    return(numVowels);
+}
+console.log("STRETCH : Vowel count for 'Hello There' is " +  vowelCount("Hello There"));
 
 
 /************************************************************** Stretch **************************************************************/
