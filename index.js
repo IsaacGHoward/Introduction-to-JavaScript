@@ -123,14 +123,18 @@ console.log("Task 4  : " + RPS("Rock"));
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
-
+function kilometersToMiles(km){
+    return(km * .621371)
+}
+console.log("Task 5A : " + kilometersToMiles(10));
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
-
+function feetToCentimeters(feet){
+    return(feet * 30.48);
+}
+console.log("Task 5B : " + feetToCentimeters(20));
 
 
 
